@@ -1,0 +1,33 @@
+scinnexus_docai/
+│
+├── main.py                      # Entrypoint
+├── config.py                    # Configuration & settings
+├── requirements.txt
+│
+├── agents/
+│   └── document_extraction_agent.py   # LangGraph agent definition
+│
+├── pipelines/
+│   ├── __init__.py
+│   ├── digital_pdf_pipeline.py         # PyMuPDF + Docling
+│   ├── scanned_pdf_pipeline.py         # OCR pipeline
+│   └── table_extraction_pipeline.py    # Table extractor
+│
+├── processors/
+│   ├── __init__.py
+│   ├── image_preprocessor.py           # OpenCV preprocessing
+│   ├── paddle_ocr_processor.py         # PaddleOCR wrapper
+│   ├── easyocr_processor.py            # EasyOCR wrapper
+│   └── figure_extractor.py             # Extract figures from PDFs
+│
+├── schemas/
+│   ├── __init__.py
+│   └── document_schema.py              # Pydantic models
+│
+├── utils/
+│   ├── __init__.py
+│   ├── document_classifier.py          # Classify document type
+│   └── text_cleaner.py                 # Post-processing text
+│
+└── tests/
+    └── test_extraction.py

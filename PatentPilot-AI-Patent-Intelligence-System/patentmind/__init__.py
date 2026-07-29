@@ -1,0 +1,1 @@
+# PatentMind AI — Root Package
